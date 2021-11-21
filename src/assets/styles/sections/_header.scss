@@ -1,0 +1,89 @@
+@import "../util/colors";
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 12px 0px;
+}
+    .header:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $dark-theme;
+        z-index: 2;
+    }
+
+    .header__body {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .header__logo {
+            flex: 0 0 152px;  //Задала ширину с помощью flex//
+            display: block;
+            position: relative;
+            z-index: 3;
+        }
+
+        .header__logo img {
+            max-width: 100%;
+        }
+
+        .header__short-logo {
+            display: none;
+            display: block;
+            position: relative;
+            z-index: 3;
+        }
+            .header__short-logo img {
+                display: none;
+                max-width: 100%;
+            }
+
+        .header__list {
+            display: flex;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .header__list li {
+            list-style: none;
+            margin-right: 50px;
+        }
+        .header__list li:last-child {
+                margin-right: 0px;
+        }
+
+            .header__link {
+                color: #fff;
+                font-size: 0.875rem;
+                text-decoration: none;
+                transition: 0.3;
+                border-bottom: 3px solid transparent;
+                transition: 0.3s;
+            } 
+            
+            .header__link-icon {
+            width: 100%;
+            display: none;
+            } 
+
+            .header__link-icon img {
+                width: 100%;
+                max-width: 24px;
+            }
+
+                .header__link:hover {
+                    border-bottom: 3px solid $accent-color;
+                }
+
+@import "../util/media";
