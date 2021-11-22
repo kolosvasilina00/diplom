@@ -20,6 +20,7 @@ function html() {
         .pipe(
             pug({
                 pretty:true,
+                compileDebug:true,
             })
         )
         .pipe(dest('build'))
@@ -58,7 +59,7 @@ function clear() {
 
 function startWatch() {
     watch('src/**/*.pug', html)
-    watch('src/assets/styles//*.scss', css)
+    watch('src/assets/styles/**/*.scss', css)
     watch('src/assets/images//*', images)
     watch('src/assets/fonts/**/*', fonts)
 }
