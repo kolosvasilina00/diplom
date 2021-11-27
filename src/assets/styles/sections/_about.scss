@@ -1,0 +1,108 @@
+@import "../util/colors";
+@import "../util/mixins";
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bright-theme;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.about__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__title {
+    @include h2;
+    color: $blackout-color;
+}
+
+.about__content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 64px;
+}
+
+.about__image-animated {
+    position: absolute;
+    max-width: 100%;
+    width: 350px;
+    top: -160px;
+    right: -25vw;
+    z-index: 0;
+    animation-name: rotation;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    opacity: 0.3;
+}
+
+.about__image-animated-2 {
+    width: 250px;
+    top: 266px;
+    right: 0;
+    left: -20vw;
+    animation-name: reverse-rotation;
+}
+
+.about__image {
+    flex: 0 0 445px;
+    margin-right: 30px;
+}
+
+.about__image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about__text-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 635px;
+    margin-top: 78px;
+}
+
+.about__text-block__title {
+    @include h2;
+    color: $black;
+    margin-bottom: 64px;
+}
+
+.about__text-block__subtitle {
+    @include p;
+    color: $black;
+    max-height: 132px;
+    overflow-y:scroll; //если контента больше, то будет вертикальный скролл//
+    scrollbar-width: none; //прозрачный скролл для мозилы//
+}
+
+.about__text-block__subtitle::-webkit-scrollbar {
+    display: none; //прозрачный скролл для chrome//
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes reverse-rotation {
+    0% {
+        transform:rotate(360deg);
+    }
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+@import "../util/media";
