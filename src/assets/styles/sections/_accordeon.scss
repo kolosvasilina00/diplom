@@ -67,7 +67,7 @@
 
 .accordeon__container input:checked + label {
     background-color: $accent-color;
-    color: #FFF;
+    color: $white;
 }
 
 .accordeon__container input:checked + label:before {
@@ -78,7 +78,7 @@
 .accordeon__container input:checked + label + .accordeon__body {
     height: auto;
     margin-top: -5px;
-    color: #000;
+    color: $blackout;
     padding: 20px 30px 10px;
 }
 
