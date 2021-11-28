@@ -1,0 +1,18 @@
+mixin gallery-item (src, title, subtitle)
+    .gallery__item 
+        .gallery__item__image
+            img(src= src)
+        .gallery__image-blackout   
+        .gallery__item__text
+            h4.gallery__item__title= title
+            p.gallery__item__subtitle= subtitle
+
+section.gallery 
+    .container
+        .gallery__block
+          +gallery-item('/assets/images/gallery-image-1.png', 'Развитие и поддержка', 'Развитие и поддержка спидкубинга в стране на всех уровнях и площадках.')
+          +gallery-item('/assets/images/gallery-image-2.png', 'Международная арена', 'Развитие международных спортивных связей Республики Беларусь, в том числе обеспечение участия на международных соревнованиях.')
+          +gallery-item('/assets/images/gallery-image-3.png', 'Организация соревнований', 'Организатор республиканских и помощник в организации международных чемпионатов, первенств, кубков.')
+          +gallery-item('/assets/images/gallery-image-4.png', 'Онлайн трансляции', 'Организация и поддержка онлайн-трансляций с чемпионатов по спидкубингу.')
+          +gallery-item('/assets/images/gallery-image-5.png', 'Выработка норм', 'Выработка норм, требований и порядка присвоения спортивных разрядов, званий, включение их в Спортивную классификацию Республики Беларусь.')
+          +gallery-item('/assets/images/gallery-image-6.png', 'Кадровая политика', 'Подготовка судей, их аттестация, контроль за деятельностью, отбор и представление спортсменов, тренеров на присвоение званий, квалификаций.')

@@ -65,19 +65,20 @@
 .about__text-block {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     max-width: 635px;
     margin-top: 78px;
 }
 
 .about__text-block__title {
     @include h2;
-    color: $black;
+    color: $blackout-color;
     margin-bottom: 64px;
 }
 
 .about__text-block__subtitle {
     @include p;
-    color: $black;
+    color: $blackout-color;
     max-height: 132px;
     overflow-y:scroll; //если контента больше, то будет вертикальный скролл//
     scrollbar-width: none; //прозрачный скролл для мозилы//

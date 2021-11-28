@@ -1,3 +1,6 @@
+@import "../util/colors";
+@import "../util/mixins";
+
 @media (max-width:1440px) {
     .about__image-animated {
         width: 250px;
@@ -13,6 +16,12 @@
 @media (min-width:1400px) {
     .hero__title {
         max-width: 950px;
+    }
+}
+
+@media (max-width:1024px) {
+    .gallery__item {
+        width: calc((100% - 1*1.5rem)/2);
     }
 }
 
@@ -46,8 +55,6 @@
     }
 }
 
-
-
 @media (max-width:864px) {
     .header__link-icon {
         display: block;
@@ -57,8 +64,6 @@
         display: none;
     }
 }
-
-
 
 @media (max-width:767px) {
 
@@ -194,6 +199,14 @@
     .about__text-block__subtitle {
         max-height: 100%;
     }
+
+    .gallery__item__title {
+        @include h4__767;
+    }
+    
+    .gallery__item__subtitle {
+        @include gallery__item__subtitle__767;
+    }
 }
 
 @media (max-width:576px) {
@@ -201,16 +214,20 @@
         font-size: 20px;
     }
 
-    // .hero__title {
-    //     font-size: 1.2rem;
-    //     line-height: 1.4375rem;
-    //     max-width: 440px;
-    // }
+    .gallery__item {
+        max-width: 100%;
+        width: 100vw;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
 
-    // .hero__subtitle {
-    //     font-size: 0.5rem;
-    // }
-
+    .gallery__item__title {
+        @include h4;
+    }
+    
+    .gallery__item__subtitle {
+        @include gallery__item__subtitle;
+    }
 }
 
 @media (max-width:425px) {
@@ -218,13 +235,5 @@
     html {
         font-size: 16px;
     }
-
-
-    // .hero__title {
-    //     font-size: 1rem;
-    //     line-height: 1.1875rem;
-    //     max-width: 440px;
-    //     top: 78vh;
-    // }
 }
 
