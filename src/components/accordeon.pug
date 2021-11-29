@@ -1,6 +1,6 @@
 mixin accordeon-item (acor, title, subtitle, subtitle_2, subtitle_3, subtitle_4)
-    input(id= '' +acor)(type='checkbox', name='acor')
-    label(for='' +acor)= title
+    input(id=acor type='checkbox', name='acor')
+    label(for=acor)= title
     .accordeon__body
         p= subtitle
         p= subtitle_2
