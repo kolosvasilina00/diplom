@@ -222,7 +222,7 @@
         line-height: 1.75rem;
     }
 
-    .tasks__title-border {
+    .tasks__title::after {
         width: 625px;
     }
 
@@ -265,7 +265,7 @@
         text-align: center;
     }
 
-    .tasks__title-border {
+    .tasks__title::after {
         display: none;
     }
 
@@ -307,11 +307,11 @@
         max-height: 300px;
     }
 
-    .tasks__item img {
+    .tasks__item__point {
         position: absolute;
         max-width: 100%;
-        width: 24px;
-        height: auto;
+        min-width: 24px;
+        min-height: 24px;
         margin-right: 0;
         top: 24px;
         right: 24px;

@@ -24,13 +24,14 @@
     z-index: 1;
 }
 
-.tasks__title-border {
-    height: 11px;
-    width: 680px;
-    background-color: $accent-color;
+.tasks__title::after {
+    content:"";
+    display:block;
+    width:680px;
+    border-bottom:11px solid $accent-color;
     position: absolute;
     bottom: 4px;
-    right: 50%;                      
+    right: 50%; 
     transform: translateX(50%);
     z-index: -1;
 }
@@ -68,10 +69,12 @@
     transform: scale(102%);
 }
 
-.tasks__item img {
+.tasks__item__point {
     max-width: 100%;
-    width: 16px;
-    height: auto;
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 100%;
+    background-color: $ellipse;
     margin-right: 16px;
 }
 

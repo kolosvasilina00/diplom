@@ -1,13 +1,12 @@
 mixin tasks-item (title)
     .tasks__item 
-        <img src="/assets/images/tasks-ellipse.svg" alt="">
+        .tasks__item__point
         p.tasks__item__title= title
 
 section.tasks
     .container
         .tasks__block
             h2.tasks__title Задачи федерации спидкубинга
-                .tasks__title-border
             .tasks__content
                 +tasks-item('Объединение усилий членов ОО «Федерация спидкубинга» и всех заинтересованных организаций в развитии и популяризации спидкубинга среди населения.')
                 +tasks-item('Содействие в организации мероприятий, направленных на развитие и популяризацию спидкубинга.')
