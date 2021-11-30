@@ -1,0 +1,90 @@
+@import "../util/colors";
+@import "../util/mixins";
+
+.tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bg.png) $dark-theme;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.tasks__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasks__title {
+    @include h2;
+    color: $white;
+    position: relative;
+    z-index: 1;
+}
+
+.tasks__title-border {
+    height: 11px;
+    width: 680px;
+    background-color: $accent-color;
+    position: absolute;
+    bottom: 4px;
+    right: 50%;                      
+    transform: translateX(50%);
+    z-index: -1;
+}
+
+.tasks__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    width: 100%;
+}
+
+.tasks__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px;
+    background-color: $white;
+    max-width: 100%;
+    width: calc((100% - 1*1.5rem)/2);
+    height: 168px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.tasks__item:nth-child(n+11) { //убрала отступы у всех элементов после 11, то есть последних 2//
+    margin-bottom: 0;
+}
+
+.tasks__item:hover {
+    transform: scale(102%);
+}
+
+.tasks__item img {
+    max-width: 100%;
+    width: 16px;
+    height: auto;
+    margin-right: 16px;
+}
+
+.tasks__item__title {
+    @include p;
+    color: $blackout-color;
+    max-height: 90px;
+    overflow-y:scroll; //если контента больше, то будет вертикальный скролл//
+    scrollbar-width: none; //прозрачный скролл для мозилы//
+}
+
+.tasks__item__title::-webkit-scrollbar {
+    display: none; //прозрачный скролл для chrome//
+}
+
+@import "../util/media";
