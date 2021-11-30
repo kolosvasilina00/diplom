@@ -208,6 +208,16 @@
         @include gallery__item__subtitle__767;
     }
 
+    .accordeon__container label {
+        font-size: 1rem;
+    }
+
+    .accordeon__container .accordeon__body {
+        font-size: 0.75rem;
+        line-height: 0.9rem;
+    }
+
+    
     .tasks__title {
         font-size: 1.5rem;
         line-height: 1.75rem;
@@ -278,6 +288,11 @@
 
     html {
         font-size: 16px;
+    }
+
+    .accordeon__container .accordeon__body {
+        font-size: 0.9rem;
+        line-height: 1.08rem;
     }
 
     .tasks__item {
