@@ -1,0 +1,122 @@
+@import "../util/colors";
+@import "../util/mixins";
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bright-theme;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.projects .container {
+    position: relative;
+}
+
+.projects__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects__title {
+    @include h2;
+    color: $blackout-color;
+}
+
+.projects__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 64px;
+}
+
+.projects__image-animated {
+    position: absolute;
+    max-width: 100%;
+    width: 100px;
+    top: -40px;
+    right: 75vw;
+    z-index: 0;
+    animation-name: rotation;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    opacity: 0.3;
+}
+
+.projects__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    max-width: 100%;
+    width: calc((100% - 2*1.5rem)/3);
+    background-color: $white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.projects__item:hover {
+    transform: scale(102%);
+    -webkit-box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.09);
+    }
+
+.projects__item__image {
+    width: 100%;
+    height: 184px;
+}
+
+
+.projects__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.projects__item__title {
+    @include h4;
+    color: $blackout-color;
+    margin: 24px;
+}
+
+.projects__item__subtitle {
+    @include projects__item__subtitle;  
+    max-height: 85px;
+    margin: 0 24px;
+    overflow-y:scroll; //если контента больше, то будет вертикальный скролл//
+    scrollbar-width: none; //прозрачный скролл для мозилы//
+}
+
+.projects__item__subtitle::-webkit-scrollbar {
+    display: none; //прозрачный скролл для chrome//
+}
+
+.projects__item__button {
+    @include main__button;
+    margin: 24px;
+    transition: all 0.3s ease;
+}
+
+.projects__item__button:hover {
+    background-color: $accent-color;
+    color: $white;
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+@import "../util/media";

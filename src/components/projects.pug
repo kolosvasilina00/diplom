@@ -1,0 +1,23 @@
+mixin projects-item (src, title, subtitle, href, link)
+    .projects__item  
+        .projects__item__image
+            img(src= src)
+        h4.projects__item__title= title
+        p.projects__item__subtitle= subtitle
+        a.projects__item__button(href= href)= link 
+
+
+
+section.projects
+    .container
+        img.projects__image-animated(src="../assets/images/projects-animated-cube.svg", alt="")
+        .projects__block
+            h2.projects__title Наши проекты
+            .projects__content
+                +projects-item('/assets/images/projects-item-photo1.png', 'Кубок Школ', 'Мы официально обращаемся в школу, которая согласовывает дату проведения. После ученики школы подают заявки. В назначенный день мы приходим со всем необходимым оборудованием и организовываем для вас чемпионат.', '#', 'Подробнее')
+                +projects-item('/assets/images/projects-item-photo2.png', 'Зачеты на разряд', 'Квалификационные зачеты по 2х2х2, 3х3х3, пирамидке, скьюбу и мегаминксу. Зачет сдается в присутствии 2-х судей. После успешного сдачи зачета присуждается сертификат.', '#', 'Подробнее')
+                +projects-item('/assets/images/projects-item-photo3.png', 'Мастер-классы', 'Мы активно принимаем участие в различных мероприятих. Хотите провести мастер-класс для сотрудников? Или устроить фурор на дне рождения? Мы поможем!', '#', 'Подробнее')
+
+
+
+
