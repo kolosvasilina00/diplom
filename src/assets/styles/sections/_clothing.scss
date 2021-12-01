@@ -1,0 +1,168 @@
+@import "../util/colors";
+@import "../util/mixins";
+
+.clothing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bg.png) $dark-theme;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.clothing__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clothing__title {
+    @include h2;
+    color: $white;
+    position: relative;
+    z-index: 1;
+}
+
+.clothing__title::after {
+    content:"";
+    display:block;
+    width:380px;
+    border-bottom:11px solid $accent-color;
+    position: absolute;
+    bottom: 4px;
+    right: 50%; 
+    transform: translateX(50%);
+    z-index: -1;
+}
+
+.clothing__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    width: 100%;
+}
+
+.clothing__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 0.75rem;
+    width: 25%;
+    height: 380px;
+    position: relative;
+    perspective: 1000px;
+    transition: all 0.3s ease;
+}
+
+.clothing__card .front, .clothing__card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    background-color: $accent-color;
+    border-radius: 10px;
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    padding: 24px;
+}
+
+.clothing__card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.clothing__card:hover .back {
+    transform: rotateY(360deg);
+}
+
+.clothing__card__title {
+    @include h4;
+    color: $white;
+}
+
+.clothing__card__subtitle {
+    @include p;
+    color: $white;
+    margin: 24px 0 4px 0;
+}
+
+.clothing__card__sizes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    @include p;
+    font-size: 0.75rem;
+    color: $blackout-color;
+    border-radius: 15%;
+}
+
+.size:nth-child(1) , .size:nth-child(2) {
+    margin-right: 8px;
+}
+
+.clothing__card__subtitle-material, .clothing__card__subtitle-price {
+    @extend .clothing__card__subtitle;
+    margin-top: 0;
+    font-size: 0.875rem;
+}
+
+.clothing__card__subtitle-price:last-child {
+    margin-top: -8px;
+}
+
+.clothing__card__colors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.color {
+    @extend .size;
+    border-radius: 100%;
+}
+
+.color:nth-child(1) {
+    background-color: $white;
+}
+
+.color:nth-child(2) {
+    background-color: $blackout-color;
+}
+
+.color:nth-child(3) {
+    background-color: $gray;
+}
+
+@import "../util/media";

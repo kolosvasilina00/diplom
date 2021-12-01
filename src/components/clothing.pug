@@ -1,0 +1,29 @@
+mixin clothing-card (src, title, size1, size2, size3, material, byn, dollar)
+    .clothing__card
+        .front
+            img(src= src)
+        .back 
+            h4.clothing__card__title= title
+            p.clothing__card__subtitle Размеры:
+            .clothing__card__sizes
+                .size= size1
+                .size= size2 
+                .size= size3
+            p.clothing__card__subtitle Ткань:
+            p.clothing__card__subtitle-material= material
+            p.clothing__card__subtitle Цвета:
+            .clothing__card__colors
+                .color
+                .color
+                .color
+            p.clothing__card__subtitle Цена:
+            p.clothing__card__subtitle-price= byn
+            p.clothing__card__subtitle-price= dollar
+
+section.clothing
+    .container
+        .clothing__block
+            h2.clothing__title Фирменный мерч
+            .clothing__content
+                +clothing-card('/assets/images/clothing-photo-1.png', 'Футболка', 'S', 'M', 'L', 'Хлопок 100%', '25 BYN', '12 $')
+                +clothing-card('/assets/images/clothing-photo-2.png', 'Толстовка', 'S', 'M', 'L', 'Хлопок 100%', '50 BYN', '20 $')
