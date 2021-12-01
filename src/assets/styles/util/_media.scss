@@ -53,6 +53,10 @@
     .about__text-block__subtitle {
         max-height: 92px;
     }
+
+    .projects__image-animated {
+        display: none;
+    }
 }
 
 @media (max-width:864px) {
@@ -236,6 +240,24 @@
     .tasks__item__title {
         max-height: 100px;
     }
+
+    .projects__content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .projects__item {
+        width: 70vw;
+        margin-bottom: 1.5rem;
+    }
+
+    .projects__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .projects__item__subtitle {
+        max-height: fit-content;
+    }
 }
 
 @media (max-width:576px) {
@@ -315,6 +337,10 @@
         margin-right: 0;
         top: 24px;
         right: 24px;
+    }
+
+    .projects__item {
+        width: 95vw;
     }
 }
 
