@@ -53,7 +53,7 @@ function fonts() {
 }
 
 function js() {
-    return src('src/assets/js//*')
+    return src('src/assets/js/**/*')
         .pipe(dest('build/assets/js'))
         .pipe(browserSync.stream())
 }

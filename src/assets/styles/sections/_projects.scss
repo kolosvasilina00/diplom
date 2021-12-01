@@ -10,6 +10,10 @@
     overflow: hidden;
 }
 
+.projects .container {
+    position: relative;
+}
+
 .projects__block {
     display: flex;
     flex-direction: column;
@@ -23,11 +27,10 @@
 }
 
 .projects__content {
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     margin-top: 64px;
 }
 
@@ -35,8 +38,8 @@
     position: absolute;
     max-width: 100%;
     width: 100px;
-    top: -175px;
-    right: 80vw;
+    top: -40px;
+    right: 75vw;
     z-index: 0;
     animation-name: rotation;
 	animation-duration: 10s;
