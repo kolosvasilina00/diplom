@@ -1,0 +1,25 @@
+mixin slider-item (src)
+    .slider__item
+        img(src= src)
+
+section.partners
+    .container
+        .partners__block
+            h2.partners__title Наши партнеры
+            .partners__slider
+                .partners__slider__prew-arrow
+                    img(src="../assets/images/slider-arrow.png", alt="")
+                .slider__items
+                    +slider-item('/assets/images/partner1.png')
+                    +slider-item('/assets/images/partner2.png')
+                    +slider-item('/assets/images/partner3.png')
+                    +slider-item('/assets/images/partner4.png')
+                .partners__slider__next-arrow
+                    img(src="../assets/images/slider-arrow.png", alt="")
+
+      
+
+
+
+
+

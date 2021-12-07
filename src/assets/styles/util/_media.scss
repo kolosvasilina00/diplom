@@ -61,6 +61,14 @@
     .projects__image-animated {
         display: none;
     }
+
+    .slider__item {
+        width: calc((100% - 2*2rem)/3);
+    }
+
+    .slider__item:last-child {
+        display: none;
+    }
 }
 
 @media (max-width:864px) {
@@ -283,6 +291,22 @@
 
     .clothing__card:first-child {
         margin-bottom: 24px;
+    }
+
+    .slider__items {
+        justify-content: center;
+    }
+
+    .slider__item {
+        width: 95%;
+        height: auto;
+    }
+
+    .slider__item:nth-child(2), .slider__item:nth-child(3) {
+        display: none;
+    }
+    .partners__slider__prew-arrow, .partners__slider__next-arrow {
+        display: none;
     }
 }
 
