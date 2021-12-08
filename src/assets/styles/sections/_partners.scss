@@ -35,13 +35,13 @@
     margin-top: 64px;
 }
 
-.partners__slider__prew-arrow, .partners__slider__next-arrow {
+.partners__slider-arrow {
     max-width: 100%;
     width: 16px;
     align-items: center;
 }
 
-.partners__slider__prew-arrow {
+.partners__slider-arrow--prew {
     transform: rotate(180deg)
 }
 
