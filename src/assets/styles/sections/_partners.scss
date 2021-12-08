@@ -1,0 +1,69 @@
+@import "../util/colors";
+@import "../util/mixins";
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bright-theme;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.partners .container {
+    position: relative;
+}
+
+.partners__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners__title {
+    @include h2;
+    color: $blackout-color;
+}
+
+.partners__slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 64px;
+}
+
+.partners__slider-arrow {
+    max-width: 100%;
+    width: 16px;
+    align-items: center;
+}
+
+.partners__slider-arrow--prew {
+    transform: rotate(180deg)
+}
+
+.slider__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 2rem 0 2rem;
+    width: 100%;
+}
+
+.slider__item {
+    display: flex;
+    width: calc((100% - 3*2rem)/4);
+    height: 120px;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+
+
+@import "../util/media";
